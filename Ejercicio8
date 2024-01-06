@@ -1,0 +1,23 @@
+packet main;
+import java.util.Scanner;
+public class DiagonalSecundaria {
+
+    public static void main(String[] args) {
+        int[][] matriz = new int[4][4];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("Ingrese el elemento en la fila " + i + " columna " + j + ": ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+        int[] diagonalSecundaria = new int[4];
+        for (int i = 0; i < 4; i++) {
+            diagonalSecundaria[i] = matriz[i][i];
+        }
+        System.out.println("Los elementos de la diagonal secundaria son:");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(diagonalSecundaria[i]);
+        }
+    }
+} 
