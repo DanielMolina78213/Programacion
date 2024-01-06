@@ -1,0 +1,33 @@
+ package main;
+import java.util.Scanner;
+public class SumatoriaDeMatriz {
+    public static void main(String[] args) {
+        int[][] matriz = new int[5][5];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                System.out.print("Ingrese el elemento en la fila " + i + " columna " + j + ": ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+        int[] sumatoriasFilas = new int[5];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                sumatoriasFilas[i] += matriz[i][j];
+            }
+        }
+        int[] sumatoriasColumnas = new int[5];
+        for (int j = 0; j < 5; j++) {
+            for (int i = 0; i < 5; i++) {
+                sumatoriasColumnas[j] += matriz[i][j];
+            }
+        }
+        System.out.println("Sumatorias de las filas:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Fila " + i + ": " + sumatoriasFilas[i]);
+        }
+
+        System.out.println("Sumatorias de las columnas:");
+        for (int j = 0; j < 5; j++) {
+            System.out.println("Columna " + j + ": " + sumatoriasColumnas[j]);
+        }  } }
