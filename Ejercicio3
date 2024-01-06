@@ -1,0 +1,18 @@
+package Main;
+import java.util.Scanner;
+public class Elementoschar {
+    public static void main(String[] args) {
+        Scanner leo = new Scanner(System.in);
+        System.out.println("Ingrese el numero de elementos [" + "]");
+        int Nelementos = leo.nextInt();
+        char [] Lelementos = new char[Nelementos];
+        for (int i = 0; i < Lelementos.length; i++) {
+            System.out.println("Ingrese las letras");
+            Lelementos[i] = leo.next().charAt(0);
+        }
+        System.out.println("Orden inverso es" );
+        for (int i = Lelementos.length-1; i >= 0; i--) {
+            System.out.println(Lelementos[i]);
+        }
+        }
+        }
