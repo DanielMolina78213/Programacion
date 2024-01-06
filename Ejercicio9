@@ -1,0 +1,27 @@
+ package main;
+import java.util.Scanner;
+import public class CuartoCuadrante {
+
+    public static void main(String[] args) {
+        int[][] matriz = new int[4][4];
+        Scanner sc = new Scanner(System.in);
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print("Ingrese el elemento en la fila " + i + " columna " + j + ": ");
+                matriz[i][j] = sc.nextInt();
+            }
+        }
+        int[] cuartoCuadrante = new int[4];
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                if (i > j) {
+                    cuartoCuadrante[i] = matriz[i][j];
+                }
+            }
+        }
+        System.out.println("Los elementos del cuarto cuadrante son:");
+        for (int i = 0; i < 4; i++) {
+            System.out.println(cuartoCuadrante[i]);
+        }
+    }
+}
