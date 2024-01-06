@@ -1,0 +1,15 @@
+package main;
+public class ElementosLong {
+    public static void main(String[] args) {
+        long [] tamaño = new long [10];
+        for (int i = 0; i < tamaño.length; i++) {
+            tamaño[i] = i * 470;
+            System.out.println("Resultados del primer arreglo "+tamaño[i]);
+        }
+        long [] copia = new long [10];
+        for (int i = 0; i <= copia.length-1; i++) {
+            copia [i] = tamaño[i];
+            System.out.println("La copia en el segundo arreglos es "+ copia[i]);
+        }
+    }
+}
